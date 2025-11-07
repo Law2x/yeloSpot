@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yelo Spot Delivery</title>
+  <link rel="stylesheet" href="/styles.css"/>
+  <link rel="icon" href="/logo.png"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <img src="/logo.png" alt="Yelo Spot logo" onerror="this.style.display='none'"/>
+    <div class="brand">YELO SPOT</div>
+  </header>
+  <div class="container">
+    <div class="card">
+      <div class="row">
+        <div class="full">
+          <label>Service Type</label>
+          <select id="serviceType">
+            <option value="MOTORCYCLE">Motorcycle</option>
+            <option value="MPV">MPV</option>
+          </select>
+        </div>
+        <div class="full">
+          <div id="map"></div>
+          <p class="muted">Click to set <b>pickup</b>, click again to set <b>drop‑off</b>. Drag markers to adjust.</p>
+        </div>
+        <div>
+          <label>Pickup (lat,lng)</label>
+          <input id="pickup" placeholder="14.5995,120.9842">
+        </div>
+        <div>
+          <label>Drop-off (lat,lng)</label>
+          <input id="dropoff" placeholder="14.5547,121.0244">
+        </div>
+        <div><button id="btnQuote">Get Quote</button></div>
+        <div><div id="quoteBox" class="price"></div></div>
+        <div class="full">
+          <button id="btnOrder" disabled>Place Order</button>
+          <p id="orderMsg" class="muted"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="trackingCard" style="display:none">
+      <h3>Live Tracking (Webhook → SSE)</h3>
+      <div id="trackMap"></div>
+      <p id="trackMsg" class="muted"></p>
+    </div>
+  </div>
+  <footer>© <span id="year"></span> Yelo Spot</footer>
+  <script src="/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

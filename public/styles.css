@@ -1,0 +1,17 @@
+:root{ --yelospot:#FFD400; --black:#0a0a0a; --white:#fff;}
+*{box-sizing:border-box}
+body{margin:0;font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Arial;background:var(--black);color:var(--white)}
+header{display:flex;gap:12px;align-items:center;padding:14px 18px;border-bottom:1px solid #222}
+header img{height:42px}
+.brand{color:var(--yelospot);font-weight:900;letter-spacing:.5px}
+.container{max-width:1100px;margin:20px auto;padding:0 20px}
+.card{background:#111;border:1px solid #222;border-radius:16px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.full{grid-column:1/-1}
+label{font-size:12px;opacity:.85}
+input,select,button{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #333;background:#0f0f0f;color:#fff}
+button{background:var(--yelospot);color:#000;font-weight:800;border-color:transparent;cursor:pointer}
+#map,#trackMap{height:420px;border-radius:16px;overflow:hidden}
+.price{font-size:28px;font-weight:800;color:var(--yelospot)}
+.muted{opacity:.8}
+footer{padding:24px;text-align:center;opacity:.7}
